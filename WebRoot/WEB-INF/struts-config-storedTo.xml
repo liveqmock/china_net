@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans />
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+  
+	<!-- 出账收入录入 -->
+  	<action path="/queryStoredTo" type="com.neusoft.action.storedTo.QueryStoredToAction">
+  		<forward name="ok" path="/tab/yu_cun_record_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/getStoredTo" type="com.neusoft.action.storedTo.GetStoredToAction">
+  		<forward name="ok" path="/tab/yu_cun_record_tab_add.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/addStoredTo" type="com.neusoft.action.storedTo.InsertStoredToAction">
+  		<forward name="ok" path="/tab/yu_cun_record_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/getStoredToMsg" type="com.neusoft.action.storedTo.GetStoredToMsgAction">
+  		<forward name="ok" path="/tab/yu_cun_record_tab_update.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/updateStoredTo" type="com.neusoft.action.storedTo.UpdateStoredToAction">
+  		<forward name="ok" path="/tab/yu_cun_record_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/updateStoredTo" type="com.neusoft.action.storedTo.UpdateStoredToAction">
+  		<forward name="ok" path="/tab/yu_cun_record_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<!-- 出账收入归集 -->
+  	<action path="/getGatherStoredTo" type="com.neusoft.action.storedTo.GetStoredToAction">
+  		<forward name="ok" path="/tab/yu_cun_gather_tab.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/queryGatherStoredTo" type="com.neusoft.action.storedTo.QueryStoredToAction">
+  		<forward name="ok" path="/tab/yu_cun_gather_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<!-- 出账收入稽核 -->
+  	<action path="/getCheckStoredTo" type="com.neusoft.action.storedTo.GetStoredToAction">
+  		<forward name="ok" path="/tab/yu_cun_check_tab.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/queryCheckStoredTo" type="com.neusoft.action.storedTo.QueryStoredToAction">
+  		<forward name="ok" path="/tab/yu_cun_check_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<!-- 操作稽核状态AJAX -->
+  	<action path="/updateStoredToAuditStatus" type="com.neusoft.action.storedTo.UpdateAuditStatusStoredToAction"/>
+  	
+  </action-mappings>
+  <message-resources parameter="com.neusoft.struts.ApplicationResources" />
+</struts-config>
+

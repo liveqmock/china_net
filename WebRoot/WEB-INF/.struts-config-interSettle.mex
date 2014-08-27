@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/queryInterSettle.do" location="0,0" dimension="302,88" />
+  <StrutsActivity path="/getInterSettle.do" location="0,282" dimension="289,88" />
+  <StrutsActivity path="/addInterSettle.do" location="389,282" dimension="301,88" />
+  <StrutsActivity path="/getInterSettleMsg.do" location="735,282" dimension="308,88" />
+  <StrutsActivity path="/updateInterSettle.do" location="402,0" dimension="307,88" />
+  <StrutsActivity path="/deleteInterSettle.do" location="809,0" dimension="303,88" />
+  <StrutsActivity path="/getCheckInterSettle.do" location="694,564" dimension="289,88" />
+  <StrutsActivity path="/queryCheckInterSettle.do" location="0,564" dimension="302,88" />
+  <StrutsActivity path="/updateAuditStatusInterSettle.do" location="334,846" dimension="363,88" />
+  <StrutsActivity path="/getGatherInterSettle.do" location="0,846" dimension="289,88" />
+  <StrutsActivity path="/queryGatherInterSettle.do" location="347,564" dimension="302,88" />
+  <StrutsActivity path="/tab/wang_jian_record_tab_search.jsp" location="447,188" dimension="217,49" />
+  <StrutsActivity path="/tab/wang_jian_record_tab_add.jsp" location="240,470" dimension="203,49" />
+  <StrutsActivity path="/tab/wang_jian_record_tab_update.jsp" location="779,470" dimension="219,49" />
+  <StrutsActivity path="/tab/wang_jian_check_tab.jsp" location="751,752" dimension="175,49" />
+  <StrutsActivity path="/tab/wang_jian_check_tab_search.jsp" location="44,752" dimension="213,49" />
+  <StrutsActivity path="/tab/wang_jian_gather_tab.jsp" location="54,1034" dimension="180,49" />
+  <StrutsActivity path="/tab/wang_jian_gather_tab_search.jsp" location="389,752" dimension="218,49" />
+  <StrutsTransition id="/queryGatherInterSettle.do,ok,/tab/wang_jian_gather_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="498,652" />
+      <AbsolutePoint location="498,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateInterSettle.do,ok,/tab/wang_jian_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="555,88" />
+      <AbsolutePoint location="555,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryCheckInterSettle.do,ok,/tab/wang_jian_check_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="151,652" />
+      <AbsolutePoint location="151,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addInterSettle.do,ok,/tab/wang_jian_record_tab_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="539,370" />
+      <AbsolutePoint location="539,420" />
+      <AbsolutePoint location="392,420" />
+      <AbsolutePoint location="392,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getInterSettle.do,ok,/tab/wang_jian_record_tab_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="144,370" />
+      <AbsolutePoint location="144,420" />
+      <AbsolutePoint location="291,420" />
+      <AbsolutePoint location="291,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getGatherInterSettle.do,ok,/tab/wang_jian_gather_tab.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="144,934" />
+      <AbsolutePoint location="144,1034" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getCheckInterSettle.do,ok,/tab/wang_jian_check_tab.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="838,652" />
+      <AbsolutePoint location="838,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deleteInterSettle.do,ok,/tab/wang_jian_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="960,88" />
+      <AbsolutePoint location="960,138" />
+      <AbsolutePoint location="627,138" />
+      <AbsolutePoint location="627,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryInterSettle.do,ok,/tab/wang_jian_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="151,88" />
+      <AbsolutePoint location="151,138" />
+      <AbsolutePoint location="483,138" />
+      <AbsolutePoint location="483,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getInterSettleMsg.do,ok,/tab/wang_jian_record_tab_update.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="889,370" />
+      <AbsolutePoint location="889,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

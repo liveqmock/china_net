@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans />
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+  
+    <!-- 出账收入录入 -->
+  	<action path="/queryOutAccount" type="com.neusoft.action.outAccount.QueryOutAccountAction">
+  		<forward name="ok" path="/tab/chu_zhang_record_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	
+  	<action path="/getOutAccountMsg" type="com.neusoft.action.outAccount.GetOutAccountMsgAction">
+  		<forward name="ok" path="/tab/chu_zhang_record_tab_update.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/getOutAccount" type="com.neusoft.action.outAccount.GetOutAccountAction">
+  		<forward name="ok" path="/tab/chu_zhang_record_tab_add.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	
+  	<action path="/addOutAccount" type="com.neusoft.action.outAccount.InsertOutAccountAction">
+  		<forward name="ok" path="/tab/chu_zhang_record_tab_add.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/deleteOutAccount" type="com.neusoft.action.outAccount.DeleteOutAccountAction">
+  		<forward name="ok" path="/tab/chu_zhang_record_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	
+  	<action path="/updateOutAccount" type="com.neusoft.action.outAccount.UpdateOutAccountAction">
+  		<forward name="ok" path="/tab/chu_zhang_record_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	
+  	<!-- 出账收入稽核 -->
+  	<action path="/getCheckOutAccount" type="com.neusoft.action.outAccount.GetOutAccountAction">
+  		<forward name="ok" path="/tab/chu_zhang_check_tab.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/queryCheckOutAccount" type="com.neusoft.action.outAccount.QueryOutAccountAction">
+  		<forward name="ok" path="/tab/chu_zhang_check_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  					<!-- 操作稽核状态AJAX -->
+  	<action path="/updateOutAccountAuditStatus" type="com.neusoft.action.outAccount.UpdateAuditStatusOutAccountAction"/>
+  	
+  	
+  	<!-- 出账收入归集 -->
+  	<action path="/getGatherOutAccount" type="com.neusoft.action.outAccount.GetOutAccountAction">
+  		<forward name="ok" path="/tab/chu_zhang_gather_tab.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/queryGatherOutAccount" type="com.neusoft.action.outAccount.QueryOutAccountAction">
+  		<forward name="ok" path="/tab/chu_zhang_gather_tab_search.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	
+  	<!-- 用户管理 -->
+  	<action path="/login" type="com.neusoft.action.user.LoginAction">
+  		<forward name="admin" path="/main_admin.jsp"></forward>
+  		<forward name="recorder" path="/main_recorder.jsp"></forward>
+  		<forward name="checker" path="/main_checker.jsp"></forward>
+  		<forward name="gather" path="/main_gather.jsp"></forward>
+      <forward name="error" path="/login.jsp" />
+  		
+  	</action>
+  	<action path="/tab/addUser" type="com.neusoft.action.user.AddUserAction">
+  		<forward name="ok" path="/tab/tab_add_user.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/getUser" type="com.neusoft.action.user.GetUserAction">
+  		<forward name="ok" path="/tab/tab_update_user.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/delUser" type="com.neusoft.action.user.DelUserAction">
+  		<forward name="ok" path="/tab/tab_update_user.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/getUserById" type="com.neusoft.action.user.GetUserByIdAction">
+  		<forward name="ok" path="/tab/tab_update_ok.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/updateUser" type="com.neusoft.action.user.UpdateUserAction">
+  		<forward name="ok" path="/tab/tab_update_user.jsp"></forward>
+  		<forward name="error" path="#"></forward>
+  	</action>
+  	<action path="/tab/updatePass" type="com.neusoft.action.user.UpdatePassAction">
+		<forward name="ok" path="/tab/tab_password_user.jsp"></forward>
+  	</action>
+  	<action path="/logout" type="com.neusoft.action.user.LogoutAction">
+      <forward name="ok" path="/login.jsp" />
+  		
+  	</action>
+  	
+  </action-mappings>
+  <message-resources parameter="com.neusoft.struts.ApplicationResources" />
+</struts-config>
+

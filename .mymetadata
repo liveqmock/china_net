@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="china_netcom"
+  id="myeclipse.1305166825656"
+  context-root="/china_netcom"
+  j2ee-spec="1.4"
+  archive="china_netcom.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+web.xml文件是用来初始化配置信息：比如Welcome页面、servlet、servlet-mapping、filter、listener、启动加载级别等。
+
+当你的web工程没用到这些时，你可以不用web.xml文件来配置你的Application
+ -->
+ 
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml,
+      /WEB-INF/struts-config-storedTo.xml,
+      /WEB-INF/struts-config-interSettle.xml,
+      /WEB-INF/struts-config-cardSale.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  	<filter>
+		<filter-name>myFilter</filter-name>
+		<filter-class>com.neusoft.filter.MyFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>netcomFilter</filter-name>
+		<filter-class>com.neusoft.filter.NetcomFilter</filter-class>
+	</filter>
+	<filter-mapping>
+  		<filter-name>myFilter</filter-name>
+  		<url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+  		<filter-name>netcomFilter</filter-name>
+  		<url-pattern>*.jsp</url-pattern><!-- 过滤*.do和*.jsp 除了login.do和login.jsp-->
+    </filter-mapping>
+    <filter-mapping>
+  		<filter-name>netcomFilter</filter-name>
+  		<url-pattern>*.do</url-pattern><!-- 过滤*.do和*.jsp 除了login.do和login.jsp-->
+    </filter-mapping>
+    
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+

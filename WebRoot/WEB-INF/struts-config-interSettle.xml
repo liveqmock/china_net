@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources/>
+  <form-beans />
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+  
+  <!-- 网间结算录入 -->
+  <action path="/queryInterSettle" type="com.neusoft.action.interSettle.QueryInterSettleAction">
+	<forward name="ok" path="/tab/wang_jian_record_tab_search.jsp"></forward>
+  </action>
+  <action path="/getInterSettle" type="com.neusoft.action.interSettle.GetInterSettleAction">
+	<forward name="ok" path="/tab/wang_jian_record_tab_add.jsp"></forward>
+  </action>
+  <action path="/addInterSettle" type="com.neusoft.action.interSettle.InsertInterSettleAction">
+	<forward name="ok" path="/tab/wang_jian_record_tab_add.jsp"></forward>
+  </action>
+  <action path="/getInterSettleMsg" type="com.neusoft.action.interSettle.GetInterSettleMsgAction">
+	<forward name="ok" path="/tab/wang_jian_record_tab_update.jsp"></forward>
+  </action>
+  <action path="/updateInterSettle" type="com.neusoft.action.interSettle.UpdateInterSettleAction">
+	<forward name="ok" path="/tab/wang_jian_record_tab_search.jsp"></forward>
+  </action>
+  <action path="/deleteInterSettle" type="com.neusoft.action.interSettle.DeleteInterSettleAction">
+	<forward name="ok" path="/tab/wang_jian_record_tab_search.jsp"></forward>
+  </action>
+  <!-- 网间结算稽核 -->
+  <action path="/getCheckInterSettle" type="com.neusoft.action.interSettle.GetInterSettleAction">
+	<forward name="ok" path="/tab/wang_jian_check_tab.jsp"></forward>
+  </action>
+  <action path="/queryCheckInterSettle" type="com.neusoft.action.interSettle.QueryInterSettleAction">
+	<forward name="ok" path="/tab/wang_jian_check_tab_search.jsp"></forward>
+  </action>
+  <!-- 操作稽核状态AJAX -->
+  	<action path="/updateAuditStatusInterSettle" type="com.neusoft.action.interSettle.UpdateAuditStatusInterSettleAction"/>
+  	
+  	
+   <!-- 网间结算归集 -->
+   <action path="/getGatherInterSettle" type="com.neusoft.action.interSettle.GetInterSettleAction">
+	<forward name="ok" path="/tab/wang_jian_gather_tab.jsp"></forward>
+  </action>
+  <action path="/queryGatherInterSettle" type="com.neusoft.action.interSettle.QueryInterSettleAction">
+	<forward name="ok" path="/tab/wang_jian_gather_tab_search.jsp"></forward>
+  </action>
+  </action-mappings>
+  
+  <message-resources parameter="com.neusoft.struts.ApplicationResources" />
+</struts-config>
+

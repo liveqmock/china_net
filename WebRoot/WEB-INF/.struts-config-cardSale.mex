@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/insertCardSale.do" location="0,362" dimension="283,88" />
+  <StrutsActivity path="/getCardSale.do" location="383,362" dimension="271,88" />
+  <StrutsActivity path="/getCardSale1.do" location="0,926" dimension="271,88" />
+  <StrutsActivity path="/getCardSale2.do" location="316,926" dimension="271,88" />
+  <StrutsActivity path="/queryCardSale.do" location="754,362" dimension="284,88" />
+  <StrutsActivity path="/gatherCardSale.do" location="335,644" dimension="284,88" />
+  <StrutsActivity path="/checkCardSale.do" location="664,644" dimension="284,88" />
+  <StrutsActivity path="/getCheckCardSale.do" location="632,926" dimension="271,88" />
+  <StrutsActivity path="/getCardSaleMsg.do" location="0,644" dimension="290,88" />
+  <StrutsActivity path="/updateCardSale.do" location="1138,362" dimension="289,88" />
+  <StrutsActivity path="/deleteCardSale.do" location="1527,362" dimension="285,88" />
+  <StrutsActivity path="/updateCardSaleAuditStatus.do" location="0,1208" dimension="345,88" />
+  <StrutsActivity path="/tab/chu_zhang_record_tab_search.jsp" location="385,268" dimension="220,49" />
+  <StrutsActivity path="#" location="1497,268" dimension="37,49" />
+  <StrutsActivity path="/tab/chu_zhang_record_tab_update.jsp" location="1141,268" dimension="222,49" />
+  <StrutsActivity path="/tab/chu_zhang_record_tab_add.jsp" location="2055,268" dimension="206,49" />
+  <StrutsActivity path="/main.jsp" location="2595,268" dimension="73,49" />
+  <StrutsActivity path="/tab/ka_xiao_record_tab_search.jsp" location="793,550" dimension="205,49" />
+  <StrutsActivity path="/tab/ka_xiao_record_tab_add.jsp" location="40,1114" dimension="191,49" />
+  <StrutsActivity path="/tab/ka_xiao_gather_tab.jsp" location="367,1114" dimension="168,49" />
+  <StrutsActivity path="/tab/ka_xiao_gather_tab_search.jsp" location="374,832" dimension="206,49" />
+  <StrutsActivity path="/tab/ka_xiao_check_tab_search.jsp" location="705,832" dimension="201,49" />
+  <StrutsActivity path="/tab/ka_xiao_check_tab.jsp" location="686,1114" dimension="163,49" />
+  <StrutsActivity path="/tab/ka_xiao_record_tab_update.jsp" location="41,832" dimension="207,49" />
+  <StrutsTransition id="/getCardSale1.do,ok,/tab/ka_xiao_record_tab_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="135,1014" />
+      <AbsolutePoint location="135,1114" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addOutAccount.do,error,#,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1737,88" />
+      <AbsolutePoint location="1737,118" />
+      <AbsolutePoint location="1521,118" />
+      <AbsolutePoint location="1521,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deleteOutAccount.do,error,#,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="651,88" />
+      <AbsolutePoint location="651,178" />
+      <AbsolutePoint location="1505,178" />
+      <AbsolutePoint location="1505,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getOutAccountMsg.do,ok,/tab/chu_zhang_record_tab_update.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1321,88" />
+      <AbsolutePoint location="1321,238" />
+      <AbsolutePoint location="1252,238" />
+      <AbsolutePoint location="1252,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkCardSale.do,ok,/tab/ka_xiao_check_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="806,732" />
+      <AbsolutePoint location="806,832" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getOutAccount.do,ok,/tab/chu_zhang_record_tab_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2295,88" />
+      <AbsolutePoint location="2295,118" />
+      <AbsolutePoint location="2209,118" />
+      <AbsolutePoint location="2209,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateOutAccount.do,ok,/tab/chu_zhang_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="79,88" />
+      <AbsolutePoint location="79,238" />
+      <AbsolutePoint location="421,238" />
+      <AbsolutePoint location="421,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getOutAccount.do,error,#,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2145,88" />
+      <AbsolutePoint location="2145,148" />
+      <AbsolutePoint location="1526,148" />
+      <AbsolutePoint location="1526,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateCardSale.do,ok,/tab/ka_xiao_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1282,450" />
+      <AbsolutePoint location="1282,485" />
+      <AbsolutePoint location="937,485" />
+      <AbsolutePoint location="937,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addOutAccount.do,ok,/tab/chu_zhang_record_tab_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1893,88" />
+      <AbsolutePoint location="1893,118" />
+      <AbsolutePoint location="2106,118" />
+      <AbsolutePoint location="2106,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,error,#,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2524,88" />
+      <AbsolutePoint location="2524,178" />
+      <AbsolutePoint location="1531,178" />
+      <AbsolutePoint location="1531,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getCardSale.do,ok,/tab/ka_xiao_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="518,450" />
+      <AbsolutePoint location="518,485" />
+      <AbsolutePoint location="855,485" />
+      <AbsolutePoint location="855,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryOutAccount.do,error,#,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1064,88" />
+      <AbsolutePoint location="1064,148" />
+      <AbsolutePoint location="1510,148" />
+      <AbsolutePoint location="1510,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getCardSaleMsg.do,ok,/tab/ka_xiao_record_tab_update.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="145,732" />
+      <AbsolutePoint location="145,832" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getCardSale2.do,ok,/tab/ka_xiao_gather_tab.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="451,1014" />
+      <AbsolutePoint location="451,1114" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryCardSale.do,ok,/tab/ka_xiao_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="896,450" />
+      <AbsolutePoint location="896,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gatherCardSale.do,ok,/tab/ka_xiao_gather_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="477,732" />
+      <AbsolutePoint location="477,832" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/insertCardSale.do,ok,/tab/ka_xiao_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="141,450" />
+      <AbsolutePoint location="141,515" />
+      <AbsolutePoint location="814,515" />
+      <AbsolutePoint location="814,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryOutAccount.do,ok,/tab/chu_zhang_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="908,88" />
+      <AbsolutePoint location="908,238" />
+      <AbsolutePoint location="568,238" />
+      <AbsolutePoint location="568,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateOutAccount.do,error,#,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="237,88" />
+      <AbsolutePoint location="237,208" />
+      <AbsolutePoint location="1499,208" />
+      <AbsolutePoint location="1499,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,ok,/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2632,88" />
+      <AbsolutePoint location="2632,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deleteOutAccount.do,ok,/tab/chu_zhang_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="495,88" />
+      <AbsolutePoint location="495,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getOutAccountMsg.do,error,#,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1480,88" />
+      <AbsolutePoint location="1480,118" />
+      <AbsolutePoint location="1515,118" />
+      <AbsolutePoint location="1515,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/getCheckCardSale.do,ok,/tab/ka_xiao_check_tab.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="767,1014" />
+      <AbsolutePoint location="767,1114" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deleteCardSale.do,ok,/tab/ka_xiao_record_tab_search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1669,450" />
+      <AbsolutePoint location="1669,515" />
+      <AbsolutePoint location="978,515" />
+      <AbsolutePoint location="978,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

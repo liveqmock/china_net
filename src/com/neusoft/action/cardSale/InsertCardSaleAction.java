@@ -1,0 +1,61 @@
+package com.neusoft.action.cardSale;
+
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+
+import com.neusoft.commonDao.DAOFactory;
+import com.neusoft.util.Page;
+import com.neusoft.vo.CardSale;
+import com.neusoft.vo.User;
+
+public class InsertCardSaleAction extends Action {
+	
+	@Override
+	public ActionForward execute(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		request.setCharacterEncoding("GBK");
+		
+		String yearMonth = request.getParameter(("yearMonth"));
+		String cityCode = request.getParameter("cityCode");
+		String productCode = request.getParameter("productCode");
+		double amount = Double.parseDouble(request.getParameter("amount"));
+		double parValue = Double.parseDouble(request.getParameter("parValue"));
+		double discountFee = Double.parseDouble(request.getParameter("discountFee"));
+		double totalFee = Double.parseDouble(request.getParameter("totalFee"));
+		double discount = Double.parseDouble(request.getParameter("discount"));
+		
+		//录入人员
+		User user = (User) request.getSession().getAttribute("user");
+		String recordOperator = user.getName();
+		
+		DAOFactory.getCardSaleDAO().insertCardSale(yearMonth,cityCode,
+									productCode,amount,parValue,discountFee,totalFee,discount,recordOperator);
+		
+		//查询所有城市
+		List<CardSale> cityList = null;
+		cityList=DAOFactory.getCardSaleDAO().getAllCityName();
+		
+		//查询所有产品
+		List<CardSale> productList = null;
+		productList=DAOFactory.getCardSaleDAO().getAllProductName();
+		
+		//下拉列表
+		request.setAttribute("city", cityList);//出账城市
+		request.setAttribute("product", productList);//产品名称
+		
+		Page page = new Page(0,1,0);//设置分页
+		request.setAttribute("page", page);
+		
+		return mapping.findForward("ok");
+	}
+
+}

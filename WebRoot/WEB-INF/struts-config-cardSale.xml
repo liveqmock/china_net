@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans />
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+  
+  	<!-- 卡销售模块 -->
+  	<action path="/insertCardSale" type="com.neusoft.action.cardSale.InsertCardSaleAction">
+  		<forward name="ok" path="/tab/ka_xiao_record_tab_search.jsp"></forward>
+  	</action>
+  	<action path="/getCardSale" type="com.neusoft.action.cardSale.GetCardSaleAction">
+  		<forward name="ok" path="/tab/ka_xiao_record_tab_search.jsp"></forward>
+  	</action>
+  	<action path="/getCardSale1" type="com.neusoft.action.cardSale.GetCardSaleAction">
+  		<forward name="ok" path="/tab/ka_xiao_record_tab_add.jsp"></forward>
+  	</action>
+  	<action path="/getCardSale2" type="com.neusoft.action.cardSale.GetCardSaleAction">
+  		<forward name="ok" path="/tab/ka_xiao_gather_tab.jsp"></forward>
+  	</action>
+  	<action path="/queryCardSale" type="com.neusoft.action.cardSale.QueryCardSaleAction">
+  		<forward name="ok" path="/tab/ka_xiao_record_tab_search.jsp"></forward>
+  	</action>
+  	<action path="/gatherCardSale" type="com.neusoft.action.cardSale.QueryCardSaleAction">
+  		<forward name="ok" path="/tab/ka_xiao_gather_tab_search.jsp"></forward>
+  	</action>
+  	<action path="/checkCardSale" type="com.neusoft.action.cardSale.QueryCardSaleAction">
+  		<forward name="ok" path="/tab/ka_xiao_check_tab_search.jsp"></forward>
+  	</action>
+  	<action path="/getCheckCardSale" type="com.neusoft.action.cardSale.GetCardSaleAction">
+  		<forward name="ok" path="/tab/ka_xiao_check_tab.jsp"></forward>
+  	</action>
+  	<action path="/getCardSaleMsg" type="com.neusoft.action.cardSale.GetCardSaleMsgAction">
+  		<forward name="ok" path="/tab/ka_xiao_record_tab_update.jsp"></forward>
+  	</action>
+  	<action path="/updateCardSale" type="com.neusoft.action.cardSale.UpdateCardSaleAction">
+  		<forward name="ok" path="/tab/ka_xiao_record_tab_search.jsp"></forward>
+  	</action>
+  	<action path="/deleteCardSale" type="com.neusoft.action.cardSale.DeleteCardSaleAction">
+  		<forward name="ok" path="/tab/ka_xiao_record_tab_search.jsp"></forward>
+  	</action>
+  	<action path="/updateCardSaleAuditStatus" type="com.neusoft.action.cardSale.UpdateAuditStatusCardSaleAction"/>
+  </action-mappings>
+  <message-resources parameter="com.neusoft.struts.ApplicationResources" />
+</struts-config>
+
